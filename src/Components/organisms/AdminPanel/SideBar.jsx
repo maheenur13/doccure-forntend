@@ -6,8 +6,8 @@ const SideBar = () => {
     <ProSidebar>
       <Menu iconShape="square">
         <MenuItem>
-          Add Doctor
-          <Link to="/admin/add-doctor" className="d-block m-0 w-100 p-2 " />
+          Add Pharmacy
+          <Link to="/admin/add-pharmacy" className="d-block m-0 w-100 p-2 " />
         </MenuItem>
         <MenuItem>
           Doctor List

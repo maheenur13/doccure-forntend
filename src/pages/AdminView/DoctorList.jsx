@@ -40,13 +40,13 @@ const DoctorList = () => {
   };
   console.log(doctorList);
   return (
-    <Row className="my-3">
+    <Row className="my-3 justify-content-center">
       {doctorList.length > 0 &&
         doctorList.map((item, idx) => {
           return (
-            <Col key={idx} md={3} className="text-center ">
+            <Col key={idx} lg={4} md={5} className="text-center ">
               <Card className="m-1 p-3 shadow-sm">
-                <div>
+                <div style={{ minHeight: "140px" }}>
                   <Image src={item.photoUrl} width={130} alt="Image" />
                 </div>
                 <h6 className="my-2">

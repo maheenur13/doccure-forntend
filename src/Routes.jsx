@@ -25,6 +25,8 @@ import { getAdminState, getDoctorState } from "./store/actions";
 import CommonAlert from "./Components/templates/common/CommonAlert";
 import Chat from "./ChatAllThings/Chat/Chat";
 import Join from "./ChatAllThings/Join/Join";
+import Blogs from "./pages/Blogs";
+import Pharmacy from "./Components/Pharmacy/Pharmacy";
 
 const Routes = () => {
   const { doctorProfile } = useSelector(getDoctorState);
@@ -81,11 +83,11 @@ const Routes = () => {
         </Route>
         <Route path="/pharmacy">
           <Headers></Headers>
-          <h5>Pharmacy Coming soon</h5>
+          <Pharmacy />
         </Route>
         <Route path="/blogs">
           <Headers></Headers>
-          <h5>Blogs coming soon...</h5>
+          <Blogs />
         </Route>
         <Route path="/all-labs">
           <Headers></Headers>

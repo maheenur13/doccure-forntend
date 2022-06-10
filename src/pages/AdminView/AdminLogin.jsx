@@ -11,6 +11,7 @@ import { revokeAuthUser } from "../../store/user/user.action";
 const AdminLogin = () => {
   const [adminDetails, setAdminDetails] = useState({});
   const { adminProfile } = useSelector(getAdminState);
+  const [error, setError] = useState(null);
   const router = useHistory();
   useEffect(() => {
     if (adminProfile?.email) {
@@ -31,7 +32,9 @@ const AdminLogin = () => {
         // alert("shei");
         setAdmin(data);
         router.push("/admin/doctor-list");
-      } else console.log("no data found");
+      } else {
+        setError(message);
+      }
     } catch (error) {
       alert(error);
     }
@@ -43,8 +46,8 @@ const AdminLogin = () => {
     }));
   };
   return (
-    <Container>
-      <Card style={{ maxWidth: "350px" }} className="p-4 mx-auto my-5">
+    <>
+      <Card style={{ maxWidth: "380px" }} className="p-4 mx-auto my-5">
         <h5 className="mb-3 text-center">Admin Login</h5>
         <Form onSubmit={handleSubmit}>
           <Form.Group className="mb-3" controlId="email">
@@ -67,12 +70,13 @@ const AdminLogin = () => {
               placeholder="Password"
             />
           </Form.Group>
+          {error && <p className="text-danger">{error}</p>}
           <Button type="submit" className="mt-3 w-100">
             Login
           </Button>
         </Form>
       </Card>
-    </Container>
+    </>
   );
 };
 

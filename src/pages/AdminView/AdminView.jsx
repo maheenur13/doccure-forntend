@@ -1,16 +1,17 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { Route } from "react-router-dom";
-import AddDoctor from "./AddDoctor";
+import AddPharmacy from "./AddPharmacy";
+import AddDoctor from "./AddPharmacy";
 import DoctorList from "./DoctorList";
 
 const AdminView = () => {
   return (
     <>
       <Route exact path="/admin">
-        <AddDoctor />
+        <AddPharmacy />
       </Route>
-      <Route path="/admin/add-doctor">
+      <Route path="/admin/add-pharmacy">
         <AddDoctor />
       </Route>
       <Route path="/admin/doctor-list">

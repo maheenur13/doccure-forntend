@@ -22,14 +22,14 @@ const Doctors = () => {
   }, []);
 
   return (
-    <Container className="my-4">
+    <Container className="my-4  border">
       <h5>{doctorData.length} Doctors Found</h5>
-      <Row className="my-3">
+      <Row className="my-3 w-100 mx-auto justify-content-center">
         {/* {Array.from({ length: 20 }).map((_, idx) => { */}
         {/* return ( */}
         {doctorData.map((data, idx) => {
           return (
-            <Col md={3} key={idx} className="mb-3">
+            <Col md={5} lg={4} key={idx} className="mb-3">
               <DoctorCard data={data} />
             </Col>
           );

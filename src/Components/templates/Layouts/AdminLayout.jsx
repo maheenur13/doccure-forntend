@@ -8,12 +8,12 @@ const AdminLayout = ({ children }) => {
   return (
     <Wrapper>
       <AdminHeader />
-      <Row className="h-100 w-100 ">
-        <Col md={2}>
+      <div className="d-flex h-100">
+        <div>
           <SideBar />
-        </Col>
-        <Col md={10}>{children}</Col>
-      </Row>
+        </div>
+        <div className="w-100">{children}</div>
+      </div>
     </Wrapper>
   );
 };

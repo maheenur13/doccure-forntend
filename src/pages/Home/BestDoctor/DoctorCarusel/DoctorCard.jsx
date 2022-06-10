@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const DoctorCard = ({ data }) => {
   return (
-    <Card className="p-3" style={{ maxWidth: "320px" }}>
-      <div className="text-center my-1">
-        <Image src={data?.photoUrl} width={260} alt="Doctor Image" />
+    <Card className="px-3 py-4" style={{ maxWidth: "320px" }}>
+      <div style={{ minHeight: "180px" }} className="text-center my-1">
+        <Image src={data?.photoUrl} width={180} alt="Doctor Image" />
       </div>
       <Card.Title
         className="mt-3 text-black"
